@@ -55,6 +55,7 @@ docker-compose up --build
 
 # Pull model inside container
 docker exec ollama-server ollama pull llama3.2
+
 📚 API Endpoints
 Method	Endpoint	Description
 POST	/api/v1/generate	Generate text
@@ -81,6 +82,7 @@ curl http://localhost:8001/api/v1/models
 curl -X POST http://localhost:8001/api/v1/compare \
   -H "Content-Type: application/json" \
   -d '{"prompt": "What is AI?", "model1": "llama3.2", "model2": "mistral"}'
+
 📊 Sample Response
 json
 {
@@ -91,6 +93,7 @@ json
   "tokens_per_second": 17.24,
   "status": "success"
 }
+
 💰 Cost Comparison
 Local (Ollama)	OpenAI API
 Cost	$0	~$0.002/1K tokens
@@ -98,6 +101,7 @@ Latency	Depends on hardware	~1-2 seconds
 Rate Limit	Unlimited	Tiered
 Privacy	100% Private	Data sent to cloud
 Offline	✅ Yes	❌ No
+
 🎯 Why This Matters
 No API Key Required: Works completely offline
 
