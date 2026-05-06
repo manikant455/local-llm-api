@@ -63,8 +63,9 @@ POST	/api/v1/chat	Chat with model
 GET	/api/v1/models	List models
 POST	/api/v1/compare	Compare models
 GET	/api/v1/health	Health check
+
 Usage
-bash
+
 # Generate
 curl -X POST http://localhost:8001/api/v1/generate \
   -H "Content-Type: application/json" \
